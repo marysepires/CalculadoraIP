@@ -3,8 +3,7 @@
 const $form = document.querySelector("form");
 
 const $ip = document.getElementById("ip");
-const $mascara = document.getElementById("mascara");
-const $mascaraCIDR = document.getElementById("mascaraCIDR");
+
 
 $form.addEventListener("submit", function(e) {
   e.preventDefault();
@@ -12,13 +11,8 @@ $form.addEventListener("submit", function(e) {
   limparCampos();
 
   try {
-    if (!!$mascaraCIDR.value) {
-      $mascara.value = notacaoCIDR($mascaraCIDR.value);
-    }
+
     const classe = verificarClasse($ip.value);
-    const mascara = verificarMascara($mascara.value, classe);
-    const rede = verificarRede($ip.value, $mascara.value);
-    const broadcast = verificarBroadcast($ip.value, $mascara.value);
 
     /* section result */
       
