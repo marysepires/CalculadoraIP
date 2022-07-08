@@ -33,11 +33,6 @@ function ehString(value) {
   return typeof value === "string";
 }
 
-function ehValidoMascaraOrIP(value) {
-  const regExp = /^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][1-9]|2[0-5][0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][1-9]|2[0-5][0-5])$/;
-  return regExp.test(value);
-}
-
 function converterDecimalParaBinario(decimal) {
   return (decimal >>> 0).toString(2);
 }
@@ -174,22 +169,6 @@ function negacaoBinariaQuatroOctetos(value) {
   return valueNegado;
 }
 
-function notacaoCIDR(value) {
-  let mascaraCIDR = "";
-
-  for (let i = 0; i < 32; i++) {
-    if (i < value) {
-      mascaraCIDR += "1";
-    } else {
-      mascaraCIDR += "0";
-    }
-  }
-
-  mascaraCIDR = converteBinarioParaDecimalQuatroNumeros(
-    formatarBinarioQuatroOctetos(mascaraCIDR)
-  );
-  return mascaraCIDR;
-}
 
 function formatarBinarioQuatroOctetos(value) {
   let octeto = value.slice(0, 8);
@@ -197,13 +176,4 @@ function formatarBinarioQuatroOctetos(value) {
   octeto += "." + value.slice(16, 24);
   octeto += "." + value.slice(24, 32);
   return octeto;
-}
-
-
-function qtdBitsLigado(mascara) {
-  return mascara.match(/1/g).length;
-}
-
-function qtdBitsDesligado(mascara) {
-  return mascara.match(/0/g).length;
 }
