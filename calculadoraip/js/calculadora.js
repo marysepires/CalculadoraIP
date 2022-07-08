@@ -48,18 +48,16 @@ function tipoClasse(octeto) {
     return "B";
   } else if (octeto.slice(0, 3) === "110") {
     return "C";
-  } else if (octeto.slice(0, 4) === "1110") {
-    return "D";
-  } else if (octeto.slice(0, 4) === "1111") {
-    return "E";
   }
 }
 
+function mascara(ip){
 
+
+}
 /* 
     Operação OR entre IP e o NOT da Máscara
 */
-
 
 function converterDecimalParaBinarioQuatroOctetos(value) {
   value = value.split(".");

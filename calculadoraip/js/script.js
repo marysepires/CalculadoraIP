@@ -11,7 +11,7 @@ $form.addEventListener("submit", function(e) {
   limparCampos();
 
   try {
-
+ 
     const classe = verificarClasse($ip.value);
 
     /* section result */
@@ -26,7 +26,7 @@ $form.addEventListener("submit", function(e) {
     $secaoResultado.insertAdjacentHTML('beforeend', criarCard('Classe', classe));
     
     $secaoResultado.insertAdjacentHTML('beforeend', criarCard('IP', ip.value, converterDecimalParaBinarioQuatroOctetos($ip.value)));
-    
+
     $secaoResultado.insertAdjacentHTML('beforeend', criarCard('Primeiro Endereço', ));
 
     $secaoResultado.insertAdjacentHTML('beforeend', criarCard('Ultimo Endereço', ));
