@@ -1,7 +1,6 @@
 "use strict";
 
 const $form = document.querySelector("form");
-
 const $ip = document.getElementById("ip");
 
 

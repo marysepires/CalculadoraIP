@@ -1,30 +1,7 @@
 "use strict";
 
 function verificarClasse(ip) {
-  ip = validarEntrada(ip);
   return tipoClasse(primeiroOcteto(ip));
-}
-
-function validarEntrada(value) {
-  if (ehVazio(value)) {
-    throw new Error("Passe algum valor por parâmetro");
-  }
-
-  if (!ehString(value)) {
-    throw new Error("O parâmeto deve ser do tipo String");
-  }
-
-  value = value.trim();
-
-  return value;
-}
-
-function ehVazio(value) {
-  return !!!value;
-}
-
-function ehString(value) {
-  return typeof value === "string";
 }
 
 function converterDecimalParaBinario(decimal) {
@@ -51,10 +28,6 @@ function tipoClasse(octeto) {
   }
 }
 
-function mascara(ip){
-
-
-}
 /* 
     Operação OR entre IP e o NOT da Máscara
 */
