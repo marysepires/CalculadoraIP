@@ -26,9 +26,15 @@ $form.addEventListener("submit", function(e) {
     
     $secaoResultado.insertAdjacentHTML('beforeend', criarCard('IP', ip.value, converterDecimalParaBinarioQuatroOctetos($ip.value)));
 
+    $secaoResultado.insertAdjacentHTML('beforeend', criarCard('Rede', ));
+   
+    $secaoResultado.insertAdjacentHTML('beforeend', criarCard('Máscara', ));
+    
     $secaoResultado.insertAdjacentHTML('beforeend', criarCard('Primeiro Endereço', ));
 
     $secaoResultado.insertAdjacentHTML('beforeend', criarCard('Ultimo Endereço', ));
+
+    $secaoResultado.insertAdjacentHTML('beforeend', criarCard('Broadcast', ));
     
   } catch (error) {
     document.querySelector('body').insertAdjacentHTML('beforeend', 
