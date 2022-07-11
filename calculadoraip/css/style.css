@@ -1,6 +1,23 @@
 section {
     width: 50%;
 }
+.card {
+
+    border: 2px solid #333;
+
+    border-radius: 2%;
+
+    background-color: #fffaf2;
+
+    padding: 10px 0px;
+
+    box-shadow: 0px 0px 5px #06d974;
+
+    color:#112506;
+
+    width: 300px;
+
+}
 .main {
     padding: .7rem;
     background-color: #F2F2F2;
@@ -17,13 +34,13 @@ main h2 {
     opacity: .7; }
 
 input {
-    width: 100%;
-    height: 60px;
+    width: 12%;
+    height: 40px;
     color: #333;
     border: 1px solid #fceaea;
     border-radius: 8px;
     padding: 0 24px;
-    margin: 12px 0;
+    margin: 20px 0;
     background-color: #f7d8ef;
 }
 
@@ -32,20 +49,20 @@ button {
 }
   
 .button {
-    width: 50%;
-    max-width: 250px;
+    width: 20%;
+    max-width: 180px;
     height: 60px;
     background: #c59ace;
     border: 0;
     border-radius: 20px;
     color: #fff;
-    font-weight: 700;
-    margin: 16px auto; 
+    font-weight: 600;
+    margin: 10px auto; 
     display: block;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    line-height: 60px;
+    line-height: 30px;
     transition: filter 0.2s;
     border-radius: 25px;
     box-shadow:0px 4px 6px #2522229d ;
