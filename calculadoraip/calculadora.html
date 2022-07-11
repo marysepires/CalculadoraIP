@@ -61,16 +61,17 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 <body>
-    <h1>Calculadora ip</h1>
+    <header class="header">
+        <h1>Calculadora ip</h1>
+    </header>
     <h5>(suporta classes a, b, c e sub-redes)</h5>
     <form method="get" autocomplete="off">
-        IPv4:
+        Digite o IP:
         <input oninput="vTam(this)" type="number" id="oc1" min="0" max="223" maxlength="3" placeholder="0 - 223"/> <b>.</b>
         <input oninput="vTam(this)" type="number" id="oc2" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <b>.</b>
         <input oninput="vTam(this)" type="number" id="oc3" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <b>.</b>
         <input oninput="vTam(this)" type="number" id="oc4" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <!--<b>/</b>
         <input oninput="vTam(this)" type="number" id="sub" min="0" max="254" maxlength="3" placeholder="0 - 252"/> <b>.</b>-->
-        <hr/>
         <input type="reset" value="Apagar"/>
     </form>
 
