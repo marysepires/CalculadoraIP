@@ -67,7 +67,7 @@
     <header class="header">
         <h1>Calculadora ip</h1>
     </header>
-    <h5>(suporta classes a, b, c e sub-redes)</h5>
+    <main class="main">
     <form method="get" autocomplete="off">
         <div style="text-align:center">
         Digite o IP:
@@ -77,12 +77,10 @@
         <input oninput="vTam(this)" type="number" id="oc4" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <!--<b>/</b>
         <input oninput="vTam(this)" type="number" id="sub" min="0" max="254" maxlength="3" placeholder="0 - 252"/> <b>.</b>-->
         <input type="reset" value="Apagar"/>
-    </div>
+        </div>
     </form>
-
-    <button class="button" onclick="resultado()">Resultado</button>
-    <button onclick="guarda()">Guardar</button>
-    <br><br>
+    <button class="button-33" onclick="resultado()">Resultado</button>
+    <button class= "button-33" onclick="guarda()">Guardar</button>
     <br><br>
     <h2>Resultados:</h2>
     <form>
@@ -95,5 +93,6 @@
         <input type="checkbox" onclick="converte()"/>
         <input type="text" size="10" id="endFin" placeholder="xxx.yyy.zzz.254"/>-> Ultimo endereço utilizável <br><br>
     </form>
+    </main>
 </body>
 </html>
