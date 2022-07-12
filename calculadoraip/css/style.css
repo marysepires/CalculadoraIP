@@ -67,7 +67,7 @@ input {
 }
 .card {
     border-radius: 5px;
-    box-shadow: 7px 7px 13px 0px rgba(221, 175, 248, 0.22);
+    box-shadow: 8px 8px 20px 0px rgba(221, 175, 248, 0.22);
     padding: 10px;
     margin: 100px;
     width: 1200px;
