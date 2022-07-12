@@ -65,7 +65,7 @@
             var bin = "";
             var oc = octeto;
             
-            while(w < 8){
+            while(w < 9){
                 if(oc >= x){
                     bin = bin + "1";
                     oc = oc - x;
@@ -106,18 +106,15 @@
         </div>
     </form>
     <button class="button-33" onclick="resultado()">Resultado</button>
-    <br><br>
-    <div style="text-align:center">
-        <h2>Resultados:</h2>
-        <form>
-            <input type="text" size="1" id="classe" placeholder="A/B/C"/>-> Classe
-            <input type="text" size="10" id="mascara" placeholder="255.255.255.0"/>-> Máscara de rede
-            <input type="text" size="10" id="endRede" placeholder="xxx.yyy.zzz.0"/>-> Endereço de rede
-            <input type="text" size="10" id="broadcast" placeholder="xxx.yyy.zzz.255"/>-> Broadcast
-            <input type="text" size="10" id="end1" placeholder="xxx.yyy.zzz.1"/>-> Primeiro endereço utilizável
-            <input type="text" size="10" id="endFin" placeholder="xxx.yyy.zzz.254"/>-> Ultimo endereço utilizável
-            <input type="text" size="32" id="bina" placeholder="00000000.00000000.00000000.00000000"/>-> Conversão binária
-        </form>
+    <div style="text-align:center" class="card">
+        <h2>Resultados</h2>
+            Classe <input type="text" size="1" id="classe" placeholder="A/B/C"/>
+            Mascara <input type="text" size="10" id="mascara" placeholder="255.255.255.0"/>
+            Endereço de Rede <input type="text" size="10" id="endRede" placeholder="xxx.yyy.zzz.0"/>
+            Broadcast <input type="text" size="10" id="broadcast" placeholder="xxx.yyy.zzz.255"/><br>
+            1º Endereço <input type="text" size="10" id="end1" placeholder="xxx.yyy.zzz.1"/>
+            Ultimo Endereço <input type="text" size="10" id="endFin" placeholder="xxx.yyy.zzz.254"/>
+            Conversão Binária <input type="text" size="32" id="bina" placeholder="00000000.00000000.00000000.00000000"/>
     </div>
 </body>
 

@@ -1,20 +1,6 @@
 section {
-    width: 100%;
+    width: 50%;
 }
-.main {
-    padding: .7rem;
-    background-color: #F2F2F2;
-    border: 1px solid #ebace6;
-    box-shadow: 0 0 20px 1px #d5d1e2; 
-    border-radius: 20px;
-}
-main h1 {
-    font-size: 1.3rem; }
-  
-main h2{
-    text-align: center;
-    margin: 1rem 0;
-    opacity: .7; }
 
 input {
     width: 12%;
@@ -26,6 +12,7 @@ input {
     margin: 20px 0;
     background-color: #d6e4fc;
 }
+
 
 .button-33 {
   background-color: #c59ace;
@@ -78,4 +65,16 @@ input {
     text-align: center;
     line-height: 10vh;
 }
-
+.card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(221, 175, 248, 0.22);
+    padding: 10px;
+    margin: 100px;
+    width: 1200px;
+    transition: all 0.3s ease-out;
+  }
+  card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+   
