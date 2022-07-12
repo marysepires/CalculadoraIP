@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>IPv4</title>
+    <title>Calculadora de IP</title>
     <script type="text/javascript">
         
         var cont=0
@@ -58,16 +58,15 @@
     </script>
 </head>
 <head>
-    <title>IPv4</title>
+    <title>Calculadora IPv4</title>
 </head>
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Rubik:300,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 <body>
     <header class="header">
-        <h1>Calculadora ip</h1>
+        <h1>Calculadora de Endereço ip</h1>
     </header>
-    <main class="main">
     <form method="get" autocomplete="off">
         <div style="text-align:center">
         Digite o IP:
@@ -76,11 +75,10 @@
         <input oninput="vTam(this)" type="number" id="oc3" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <b>.</b>
         <input oninput="vTam(this)" type="number" id="oc4" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <!--<b>/</b>
         <input oninput="vTam(this)" type="number" id="sub" min="0" max="254" maxlength="3" placeholder="0 - 252"/> <b>.</b>-->
-        <input type="reset" value="Apagar"/>
+        <input class="button-4" type="reset" value="Apagar"/>
         </div>
     </form>
     <button class="button-33" onclick="resultado()">Resultado</button>
-    <button class= "button-33" onclick="guarda()">Guardar</button>
     <br><br>
     <h2>Resultados:</h2>
     <form>
