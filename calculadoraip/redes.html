@@ -3,9 +3,7 @@
     <title>IPv4</title>
     <script type="text/javascript">
         
-        var cont=0
-        var rede
-        var host;
+        var cont=0;
         
         function vTam (object) {
         if (object.value.length > object.maxLength){
@@ -23,36 +21,61 @@
         
         function resultado()
         {
+            var rede
+            var host;
+            
             if(oc1.value < 128){
+                classe.value = "A";
                 rede = oc1.value;
                 host = oc2.value + "." + oc3.value + "." + oc4.value;
                 mascara.value = "255" + "." + host;
+                endRede.value = rede + "." + "0" + "." + "0" + "." + "0";
                 broadcast.value = rede + "." + "255.255.255";
                 end1.value = rede + "." + "0" + "." + "0" + "." + "1";
                 endFin.value = rede + "." + "255" + "." + "255" + "." + "254";
             }
             else if (oc1.value < 192){
+                classe.value = "B";
                 rede = oc1.value + "." + oc2.value;
                 host = oc3.value + "." + oc4.value;
                 mascara.value = "255.255" + "." + host;
+                endRede.value = rede + "." + "0" + "." + "0";
                 broadcast.value = rede + "." + "255.255";
                 end1.value = rede + "." + "0" + "." + "1";
                 endFin.value = rede + "." + "255" + "." + "254";
             }
             else if (oc1.value < 224){
+                classe.value = "C";
                 rede = oc1.value + "." + oc2.value + "." + oc3.value;
                 host = oc4.value;
                 mascara.value = "255.255.255" + "." + host;
+                endRede.value = rede + "." + "0";
                 broadcast.value = rede + "." + "255";
                 end1.value = rede + "." + "1";
                 endFin.value = rede + "." + "254";
             }
             else alert("QQ TU TÁ APRONTANDO??");
+            
+            bina.value = dec_bin(oc1.value) + dec_bin(oc2.value) + dec_bin(oc3.value) + dec_bin(oc4.value);
         }
         
-        function converte(oct)
+        function dec_bin(octeto)
         {
+            var w = 1, x = 128;
+            var bin = "";
+            var oc = octeto;
             
+            while(w < 8){
+                if(oc >= x){
+                    bin = bin + "1";
+                    oc = oc - x;
+                }
+                else    bin = bin + "0";
+                
+                x = x / 2;
+                w = w + 1;
+            }
+            return bin + ".";
         }
 
     </script>
@@ -65,27 +88,24 @@
         <input oninput="vTam(this)" type="number" id="oc1" min="0" max="223" maxlength="3" placeholder="0 - 223"/> <b>.</b>
         <input oninput="vTam(this)" type="number" id="oc2" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <b>.</b>
         <input oninput="vTam(this)" type="number" id="oc3" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <b>.</b>
-        <input oninput="vTam(this)" type="number" id="oc4" min="0" max="255" maxlength="3" placeholder="0 - 255"/> <!--<b>/</b>
-        <input oninput="vTam(this)" type="number" id="sub" min="0" max="254" maxlength="3" placeholder="0 - 252"/> <b>.</b>-->
+        <input oninput="vTam(this)" type="number" id="oc4" min="0" max="255" maxlength="3" placeholder="0 - 255"/>
         <hr/>
         <input type="reset" value="Apagar"/>
     </form>
-    
     <button onclick="resultado()">Resultado</button>
-    <button onclick="guarda()">Guardar</button>
     <br><br>
     <br><br>
     <h2>Resultados:</h2>
     
     <form>
-        <input type="checkbox" onclick="converte()"/>
-        <input type="text" size="10" id="mascara" placeholder="255.255.255.0"/>-> Máscara de rede<br><br> 
-        <input type="checkbox" onclick="converte()"/>
+        <input type="text" size="1" id="classe" placeholder="A/B/C"/>-> Classe <br><br>
+        <input type="text" size="10" id="mascara" placeholder="255.255.255.0"/>-> Máscara de rede<br><br>
+        <input type="text" size="10" id="endRede" placeholder="xxx.yyy.zzz.0"/>-> Endereço de rede<br><br>
         <input type="text" size="10" id="broadcast" placeholder="xxx.yyy.zzz.255"/>-> Broadcast<br><br>
-        <input type="checkbox" onclick="converte()"/>
         <input type="text" size="10" id="end1" placeholder="xxx.yyy.zzz.1"/>-> Primeiro endereço utilizável <br><br>
-        <input type="checkbox" onclick="converte()"/>
         <input type="text" size="10" id="endFin" placeholder="xxx.yyy.zzz.254"/>-> Ultimo endereço utilizável <br><br>
+        <input type="text" size="32" id="bina" placeholder="00000000.00000000.00000000.00000000"/>-> Conversão binária
     </form>
 </body>
+    <!-- Cê deve tá pensando assim "ah pq filipe é doido" c tá certa, só queria registrar q concordo msm-->
 </html>
